@@ -15,10 +15,11 @@ void insertionSort(std::vector<int> &arr) {
 
 int main() {
   std::vector<int> test = {12, 35, 3, 1, 2};
-  std::cout << "before: ";
+  std::cout << "Logic test:\nbefore: ";
   for (int num : test) {
     std::cout << num << ", ";
   }
+  insertionSort(test);
   std::cout << "\nafter: ";
   for (int num : test) {
     std::cout << num << ", ";
