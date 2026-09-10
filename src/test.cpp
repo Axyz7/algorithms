@@ -1,5 +1,6 @@
 #include "test.hpp"
 #include <algorithm>
+#include <iostream>
 #include <numeric>
 #include <random>
 
@@ -29,4 +30,12 @@ std::vector<int> generateTestCase(size_t size, InputType type) {
   }
   }
   return arr;
+}
+
+void printFirst10(const std::vector<int> &arr) {
+  size_t count = std::min(size_t(10), arr.size());
+  for (size_t i = 0; i < count; i++) {
+    std::cout << arr[i] << (i == count - 1 ? "" : ", ");
+  }
+  std::cout << "\n";
 }
